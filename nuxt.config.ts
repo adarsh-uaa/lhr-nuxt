@@ -14,5 +14,10 @@ export default defineNuxtConfig({
   sitemap: { exclude: ['/book', '/booking-confirmation/**'] },
   robots: { disallow: ['/book', '/booking-confirmation/'] },
   image: { format: ['webp', 'avif'], quality: 82 },
-  devtools: { enabled: false }
+  devtools: { enabled: false },
+  vite: {
+    server: {
+      allowedHosts: ['lhr-nuxt.onrender.com/'],
+    },
+  },
 })
